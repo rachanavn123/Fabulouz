@@ -47,6 +47,15 @@
                 z-index: 4;
             }
 
+            .parallax__layer--base-section {
+                color: white;
+                width: 100%;
+                padding: 25vh;
+                border-top: 25vh solid rgb(102,204,102);
+                border-bottom: 25vh solid rgb(153,216,101);
+                background: transparent;
+            }            
+
             .parallax__layer--back {
                 -webkit-transform: translateZ(-300px) scale(2);
                 transform: translateZ(-300px) scale(2);
@@ -126,7 +135,7 @@
             </div>
             <div id="group2" class="parallax__group">
                 <div class="parallax__layer parallax__layer--base">
-                    <div class="title" style="color: white;">Base Layer</div>
+                    <div class="title parallax__layer--base-section" style="color: white;">Base Layer</div>
                 </div>
                 <div class="parallax__layer parallax__layer--back">
                     <img src="http://www.wallpapereast.com/static/images/nature-wallpapers26.jpg" alt="" width="100%" height="100%">
