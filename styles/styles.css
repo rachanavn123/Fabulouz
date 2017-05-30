@@ -14,7 +14,7 @@ main {
   height: 550px;
 }
 
-.owl-nav { 
+.owl-nav {
   float: right;
 }
 
@@ -63,4 +63,12 @@ main {
 
 .owl-theme .owl-dots .owl-dot span {
   display: none;
+}
+
+
+/* Menu */
+@media (min-width: 768px) and (max-width: 979px) and (orientation:portrait) {
+    ul:first-child {
+        display: inline-flex;
+    }
 }
