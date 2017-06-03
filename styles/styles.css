@@ -20,6 +20,41 @@ nav {
     top: 0;
 }
 
+#nav-icon3 {
+    display: none;
+}
+
+@media (min-width: 380px) and (max-width: 979px) and (orientation: portrait) {
+    nav {
+        position: fixed;
+        height: auto;
+        width: 100%;
+        padding: 2rem 2rem 0 2rem;
+        top: 0;
+        background: #fff;
+        z-index: 99;
+        opacity: 0.9;
+    }
+
+    #nav-icon3 {
+        display: inline-block;
+    }
+
+    .nav.nav-stacked {
+        display: none;
+    }
+
+    .nav.nav-stacked.open {
+        display: inline-block;
+        margin-top: 1.2rem;
+        margin-left: 3rem;
+    }
+
+    #wrapper {
+        margin-top: 12rem;
+    }
+}
+
 nav ul {
     list-style-type: none;
     text-transform: uppercase;
@@ -30,6 +65,12 @@ nav > ul {
     box-shadow: none;
     margin-left: 6.2rem;
     width: 15rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    nav > ul {
+        margin-left: 3.7rem;
+    }
 }
 
 nav > ul > li > ul {
@@ -96,6 +137,12 @@ header {
     margin-bottom: 3rem;
 }
 
+@media (min-width: 380px) and (max-width: 767px) {
+    header {
+        background: url("images/faboulouz.svg") no-repeat;
+    }
+}
+
 .contact-tablet {
     display: none;
 }
@@ -104,17 +151,26 @@ header {
     display: inherit;
 }
 
-@media (min-width: 768px) and (max-width: 979px) and (orientation:portrait) {
-    ul:first-child {
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .nav.nav-stacked.open {
         display: inline-flex;
     }
 
     .contact-tablet {
         display: inline-block;
+        padding: 10px 15px;
     }
 
     .nav > li.contact-non-tablet {
         display: none;
+    }
+
+    nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
+        background: none;
+    }
+
+    .nav > li > a {
+        margin-right: 7rem;
     }
 }
 
