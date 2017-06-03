@@ -188,16 +188,17 @@ header {
   counter-reset: slides-num;
   /* Initialize counter. */
   position: absolute;
-  top: 100%;
-  left: 50%;
+  top: 99.6%;
+  right: 5.4rem;
   margin-top: 15px;
+  color: #464749;
 }
+
 .owl-dots:after {
   content: counter(slides-num);
   /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */
   display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 1.1rem;
   vertical-align: middle;
   padding-left: 0px;
 }
@@ -206,16 +207,15 @@ header {
   display: inline-block;
   counter-increment: slides-num;
   /* Increment counter */
-  margin-right: 5px;
+  margin-right: 3px;
 }
-
 
 .owl-dot.active:before {
   content: counter(slides-num)  " /";
   /* Use the same counter to get current item. */
   display: inline-block;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 1rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -230,6 +230,41 @@ header {
   display: none;
 }
 
+.owl-theme .owl-nav {
+    margin-right: 3rem;
+}
+
+.owl-theme .owl-nav .owl-prev {
+    margin-right: 4rem;
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: transparent;
+    font-size: 0.1rem;
+    transform: rotate(90deg);
+}
+
+.owl-theme .owl-nav .owl-next {
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: transparent;
+    font-size: 0.1rem;
+    transform: rotate(-90deg);
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent url("images/drop-down.svg") no-repeat;
+    color: #464749;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .owl-dots {
+        right: 3rem;
+    }
+
+    .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+        display: none;
+    }
+}
+
+/* Footer */
 footer {
     position: fixed;
     width: 15rem;
