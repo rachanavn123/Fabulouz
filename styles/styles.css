@@ -1,15 +1,124 @@
+html {
+    font-size: 100%;
+}
 
 main {
-    margin-top: 2rem;
+    /*margin-top: 3rem;*/
 }
-
 
 #content {
- width: 80%;
- margin: auto;
+    /*width: 80%;
+    margin: auto;*/
 }
 
+/* Navigation and Header */
+nav {
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    padding: 3rem;
+    top: 0;
+}
 
+nav ul {
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+nav > ul {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: 6.2rem;
+    width: 15rem;
+}
+
+nav > ul > li > ul {
+    padding-left: 1rem;
+}
+
+nav > ul a {
+    color: #464749;
+    position: relative;
+}
+
+.nav > li > a:focus, .nav >li > a:hover {
+    background-color: transparent;
+    color: #464749;
+}
+
+nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: url("images/drop-down.svg") no-repeat;
+    display: block;
+    right: 0;
+    top: 13px;
+    transform: rotate(-90deg);
+}
+
+nav a.collapsed:after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: url("images/drop-down.svg") no-repeat;
+    display: block;
+    right: 0;
+    top: 13px;
+    transform: rotate(0deg) !important;
+}
+
+nav ul li ul li a {
+    color: #808285;
+    padding: .625rem .938rem;
+    display: inline-block;
+}
+
+nav ul li ul li a:hover {
+    color: #808285;
+    text-decoration: none;
+}
+
+nav .panel {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+header {
+    padding: 3rem;
+    background: url("images/fabulouz-logo-text.svg") no-repeat;
+    margin-bottom: 3rem;
+}
+
+.contact-tablet {
+    display: none;
+}
+
+.contact-non-tablet {
+    display: inherit;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation:portrait) {
+    ul:first-child {
+        display: inline-flex;
+    }
+
+    .contact-tablet {
+        display: inline-block;
+    }
+
+    .nav > li.contact-non-tablet {
+        display: none;
+    }
+}
+
+/* Carousel */
 .owl-carousel .owl-item img {
   height: 550px;
 }
@@ -65,10 +174,8 @@ main {
   display: none;
 }
 
-
-/* Menu */
-@media (min-width: 768px) and (max-width: 979px) and (orientation:portrait) {
-    ul:first-child {
-        display: inline-flex;
-    }
+footer {
+    position: fixed;
+    padding: 14rem;
+    background: url("images/pattern.svg") no-repeat;
 }
