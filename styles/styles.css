@@ -275,8 +275,36 @@ header {
     margin-top: 2rem;
 }
 
-.collections img {
+.collections .collections-image {
     height: 18rem;
+    background: url("images/carousel/1.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0 -40rem;
+    position: relative;
+}
+
+.collections-image span {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    font-size: 2rem;
+    display: inline-block;
+    color: #fff;
+    width: 10rem;
+    overflow: hidden;
+    margin-left: -5rem;
+}
+
+.collections-details {
+    padding: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .collections .collections-image {        
+        background-size: initial;
+        background-position: 0 -30rem;
+    }
 }
 
 /* Footer */
