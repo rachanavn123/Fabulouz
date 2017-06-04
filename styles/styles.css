@@ -11,6 +11,10 @@ main {
     margin: auto;*/
 }
 
+img {
+    width: 100%;
+}
+
 /* Navigation and Header */
 nav {
     position: fixed;
@@ -97,6 +101,7 @@ nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
     right: 0;
     top: 13px;
     transform: rotate(-90deg);
+    transition: all ease-out .3s;
 }
 
 nav a.collapsed:after {
@@ -109,6 +114,7 @@ nav a.collapsed:after {
     right: 0;
     top: 13px;
     transform: rotate(0deg) !important;
+    transition: all ease-out .3s;
 }
 
 nav ul li ul li a {
@@ -262,6 +268,15 @@ header {
     .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
         display: none;
     }
+}
+
+/* Collections */
+.collections {
+    margin-top: 2rem;
+}
+
+.collections img {
+    height: 18rem;
 }
 
 /* Footer */
