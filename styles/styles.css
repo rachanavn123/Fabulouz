@@ -271,11 +271,15 @@ header {
 }
 
 /* Collections */
-.collections {
-    margin-top: 2rem;
+.collections, .about {
+    margin-top: 3rem;
 }
 
-.collections .collections-image {
+.about {
+    margin-top: 6rem;
+}
+
+.collections .collections-image, .about .about-image {
     height: 18rem;
     background: url("images/carousel/1.jpg") no-repeat;
     background-size: cover;
@@ -283,7 +287,11 @@ header {
     position: relative;
 }
 
-.collections-image span {
+.about .about-image {
+    background-image: url("images/carousel/2.jpg");
+}
+
+.collections-image span, .about-image span {
     position: absolute;
     top: 7rem;
     left: 50%;
@@ -293,9 +301,33 @@ header {
     width: 10rem;
     overflow: hidden;
     margin-left: -5rem;
+    height: 4rem;
 }
 
-.collections-details {
+.collections-image span:before, .about-image span:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.125rem;
+    background-color: #fff;
+    top: 3rem;
+    left: 25%;
+}
+
+.collections-image span:before {
+    left: 4rem;
+}
+
+.about-image span {
+    width: 6rem;
+    margin-left: -3rem;
+}
+
+.about-image span:before {
+    left: 1.8rem;
+}
+
+.collections-details, .about-details {
     padding: 3rem;
     text-align: center;
 }
