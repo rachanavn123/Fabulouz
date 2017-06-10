@@ -20,12 +20,19 @@ $(document).ready(function() {
     // });
 
     function mediaSize() {
-		if (window.matchMedia(
-            '(min-width: 768px) and (max-width: 979px) and (orientation: portrait)')
-            .matches) {
+        var tablet = '(min-width: 768px) and (max-width: 979px) and (orientation: portrait)',
+            mobilePlusTablet = '(min-width: 320px) and (max-width: 979px) and (orientation: portrait)';
+
+		if (window.matchMedia(tablet).matches) {
 	    	$("#collectionLevel1, #collectionLevel2").addClass("in");
 		} else {
             $("#collectionLevel1, #collectionLevel2").removeClass("in");
+        }
+
+        if (window.matchMedia(mobilePlusTablet).matches) {
+            $("#nav").addClass("touch-device");
+        } else {
+            $("#nav").removeClass("touch-device");
         }
 	};
 
@@ -39,4 +46,31 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
         $(".nav.nav-stacked").toggleClass("open");
 	});
+
+    // Reveal or hide menu on scroll up or down respectively
+    var previousScroll = 0,
+        menu = $("#nav");
+
+    $(window).scroll(function() {
+        if (menu.hasClass("touch-device")) {
+            var currentScroll = $(this).scrollTop();
+            if (currentScroll > previousScroll) {
+                menu.removeClass("slideInDown")
+                    .addClass("slideOutUp")
+                    .addClass("animated");
+            } else {
+                menu.removeClass("slideOutUp")
+                    .addClass("slideInDown")
+                    .addClass("animated");
+            }
+            previousScroll = currentScroll;
+        }
+    });
+
+    // Parallax
+    // TODO: For iOS devices parallax is not that smooth. May be use different one.
+    $(".parallax-window").parallax({
+        iosFix: false,
+        androidFix: false
+    });
 });
