@@ -270,13 +270,14 @@ header {
     }
 }
 
-/* Collections */
+/* Collections and About */
 .collections, .about {
     margin-top: 3rem;
 }
 
 .about {
     margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 
 .collections .collections-image, .about .about-image {
@@ -391,6 +392,51 @@ header {
 
 .wooden-floor-image {
     background: url("images/carousel/2.jpg") no-repeat;
+}
+
+/* Contact Details */
+.contact-details {
+    padding: 0 3rem 0 3rem;
+    margin-top: 3rem 0 3rem 0;
+}
+
+.contact-details > div {
+    text-align: center;
+    width: 100%;
+    color: #303031;
+}
+
+.contact-details .heading {
+    color: #6D6E71;
+    font-size: 2.5rem;
+    position: relative;
+    height: 6rem;
+}
+
+.contact-details .heading:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.063rem;
+    background-color: #80634B;
+    top: 4rem;
+    left: 10rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.maps iframe {
+    pointer-events: none;
+    border: 0;
+    height: 30rem;
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .maps iframe {
+        height: 18rem;
+    }
 }
 
 /* Footer */
