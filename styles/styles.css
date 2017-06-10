@@ -2,6 +2,11 @@ html {
     font-size: 100%;
 }
 
+body {
+    color: #313132;
+    font-family: "Raleway";
+}
+
 main {
     /*margin-top: 3rem;*/
 }
@@ -299,7 +304,7 @@ header {
     font-size: 2rem;
     display: inline-block;
     color: #fff;
-    width: 10rem;
+    width: 11rem;
     overflow: hidden;
     margin-left: -5rem;
     height: 4rem;
@@ -316,7 +321,7 @@ header {
 }
 
 .collections-image span:before {
-    left: 4rem;
+    left: 4.3rem;
 }
 
 .about-image span {
