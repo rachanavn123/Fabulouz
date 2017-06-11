@@ -70,7 +70,7 @@ $(document).ready(function() {
     // Parallax
     // TODO: For iOS devices parallax is not that smooth. May be use different one.
     $(".parallax-window").parallax({
-        iosFix: false,
-        androidFix: false
+        // iosFix: false,
+        // androidFix: false
     });
 });
