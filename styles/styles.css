@@ -64,6 +64,31 @@ nav {
     }
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    nav {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    #nav-icon3 {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 3rem;
+        right: 1.5rem;
+    }
+
+    #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+        top: .5rem;
+    }
+
+    #nav-icon3 span:nth-child(4) {
+        top: 1rem;
+    }
+
+    #wrapper {
+        margin-top: 8rem;
+    }
+}
+
 nav ul {
     list-style-type: none;
     text-transform: uppercase;
@@ -151,6 +176,8 @@ header {
 @media (min-width: 320px) and (max-width: 767px) {
     header {
         background: url("images/faboulouz.svg") no-repeat;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 
