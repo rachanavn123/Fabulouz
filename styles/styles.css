@@ -214,58 +214,59 @@ header {
 
 /* Carousel */
 .owl-carousel .owl-item img {
-  height: 550px;
+    height: 35rem;
+    object-fit: cover;
 }
 
 .owl-nav {
-  float: right;
+    float: right;
 }
 
 
 .owl-dots {
-  counter-reset: slides-num;
-  /* Initialize counter. */
-  position: absolute;
-  top: 99.6%;
-  right: 5.4rem;
-  margin-top: 15px;
-  color: #464749;
+    counter-reset: slides-num;
+    /* Initialize counter. */
+    position: absolute;
+    top: 99.6%;
+    right: 5.4rem;
+    margin-top: 15px;
+    color: #464749;
 }
 
 .owl-dots:after {
-  content: counter(slides-num);
-  /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */
-  display: inline-block;
-  font-size: 1.1rem;
-  vertical-align: middle;
-  padding-left: 0px;
+    content: counter(slides-num);
+    /* get total number of items - more info on http://www.sitepoint.com/a-little-known-way-to-replace-some-scripts-with-css-counters/ */
+    display: inline-block;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    padding-left: 0px;
 }
 
 .owl-dot {
-  display: inline-block;
-  counter-increment: slides-num;
-  /* Increment counter */
-  margin-right: 3px;
+    display: inline-block;
+    counter-increment: slides-num;
+    /* Increment counter */
+    margin-right: 3px;
 }
 
 .owl-dot.active:before {
-  content: counter(slides-num)  " /";
-  /* Use the same counter to get current item. */
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1rem;
-  position: absolute;
-  left: 0;
-  top: 0;
+    content: counter(slides-num)  " /";
+    /* Use the same counter to get current item. */
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .info {
-  text-align: center;
-  margin-top: 110px;
+    text-align: center;
+    margin-top: 110px;
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  display: none;
+    display: none;
 }
 
 .owl-theme .owl-nav {
