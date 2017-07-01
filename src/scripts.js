@@ -73,4 +73,16 @@ $(document).ready(function() {
         // iosFix: false,
         // androidFix: false
     });
+
+    // Menu actions 
+    $("#collection-menu").on("click", function() {
+        $("main, .parallax-mirror").show();            
+        $(".curtains").hide();
+
+        if ($(this).hasClass("active")) {
+            Utils.toggleMenuStyles($("#cutrains"));
+        }
+
+        $(".owl-carousel").owlCarousel({autoplay: true});
+    });
 });

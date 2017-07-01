@@ -7,17 +7,21 @@ body {
     font-family: "Raleway";
 }
 
-main {
-    /*margin-top: 3rem;*/
+/*main {
+    margin-top: 3rem;
 }
 
 #content {
-    /*width: 80%;
-    margin: auto;*/
-}
+    width: 80%;
+    margin: auto;
+}*/
 
 img {
     width: 100%;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
 }
 
 /* Navigation and Header */
@@ -156,6 +160,11 @@ nav ul li ul li a {
 nav ul li ul li a:hover {
     color: #808285;
     text-decoration: none;
+}
+
+#collection-menu.active, nav ul li ul li.active a {
+    color: #464749;
+    font-weight: bold;
 }
 
 nav .panel {
