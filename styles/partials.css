@@ -17,6 +17,30 @@
     object-fit: cover;
 }
 
+.partials-details {
+    margin-bottom: 3rem;
+}
+
+.partials-details h4 {
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.partials-details h4:before {
+    position: absolute;
+    content: "";
+    top: 2rem;
+    width: 3rem;
+    height: 0.063rem;
+    background: #313132;
+}
+
+.partials-details img { 
+    height: 14rem;
+    object-fit: cover;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .partials-details-image img { 
         height: 12rem;
@@ -51,10 +75,25 @@ span.image-title:before {
     padding: 0 3rem 0 3rem;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .partials-details-selection, .partials-details {
+        padding: 0 1.5rem 0 1.5rem;
+    }
+}
+
 .partials-info-icon {
     background: url(images/info.svg) no-repeat;
     height: 1rem;    
     width: 1rem;
     float: right;
     cursor: pointer;
+}
+
+.image-type-details {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.font-bold {
+    font-weight: bolder;
 }
