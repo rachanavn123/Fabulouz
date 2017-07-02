@@ -3,8 +3,8 @@
 }
 
 .partials .partials-content {
-    background-color: #F6F6F7;
-    height: 100vh;
+    background-color: #F6F6F7;    
+    height: 100%;
     padding: 0;
 }
 
@@ -96,4 +96,67 @@ span.image-title:before {
 
 .font-bold {
     font-weight: bolder;
+}
+
+span.image-title.upholstery-partial {
+    width: 11rem;
+    margin-left: -5.2rem;
+}
+
+span.image-title.upholstery-partial:before {
+    left: 40%;
+}
+
+span.image-title.wall-covering-partial {
+    width: 13rem;
+    margin-left: -6.2rem;
+}
+
+span.image-title.wall-covering-partial:before {
+    left: 46%;
+}
+
+span.image-title.wtow-carpets {
+    width: 19.3rem;
+    margin-left: -9.65rem;
+}
+
+span.image-title.wtow-carpets:before {
+    left: 8.65rem;
+}
+
+span.image-title.rugs {
+    width: 4.7rem;
+    margin-left: -2.35rem;
+}
+
+span.image-title.rugs:before {
+    left: 1.35rem;
+}
+
+span.image-title.wooden-floor {
+    width: 13.3rem;
+    margin-left: -6.65rem;
+}
+
+span.image-title.wooden-floor:before {
+    left: calc(50% - 1rem);
+}
+
+span.image-title.bed-lenin-bath {
+    width: 14.1rem;
+    margin-left: -7.05rem;
+}
+
+span.image-title.bed-lenin-bath:before {
+    left: calc(50% - 1rem);
+}
+
+span.image-title.accessaries {
+    width: 10.9rem;
+    margin-left: -3.64rem;
+}
+
+span.image-title.accessaries:before {
+    left: calc(50% - 1rem);
 }
