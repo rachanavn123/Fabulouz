@@ -1,6 +1,2 @@
-var Utils = {
-    toggleMenuStyles: function(ref) {
-        $("#collection-menu").toggleClass("active");
-        $(ref).toggleClass("active");
-    }
-}
+// Utils to be used for the future
+var Utils = {}

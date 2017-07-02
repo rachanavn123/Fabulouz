@@ -77,12 +77,10 @@ $(document).ready(function() {
     // Menu actions 
     $("#collection-menu").on("click", function() {
         $("main, .parallax-mirror").show();            
-        $(".curtains").hide();
+        $(".partials").hide();
 
-        if ($(this).hasClass("active")) {
-            Utils.toggleMenuStyles($("#cutrains"));
-        }
-
+        $("#collection-menu").removeClass("active");
+        $("#collectionLevel1 li").removeClass("active");
         $(".owl-carousel").owlCarousel({autoplay: true});
     });
 });
