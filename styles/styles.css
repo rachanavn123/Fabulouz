@@ -324,14 +324,7 @@ header {
 
 .collections .collections-image, .about .about-image {
     height: 18rem;
-    /*background: url("images/carousel/1.jpg") no-repeat;
-    background-size: cover;
-    background-position: 0 50%;*/
     position: relative;
-}
-
-.about .about-image {
-    /*background-image: url("images/carousel/2.jpg");*/
 }
 
 .collections-image span, .about-image span {

@@ -1,3 +1,42 @@
 .partials {
     display: none; 
 }
+
+.curtains-details-image {
+    position: relative;
+}
+
+.curtains-details-image img { 
+    height: 25rem;
+    object-fit: cover;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .curtains-details-image img { 
+        height: 12rem;
+    }
+}
+
+span.image-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    display: inline-block;
+    color: #fff;
+    width: 8rem;
+    overflow: hidden;
+    margin-left: -4rem;
+    margin-top: -2rem;
+    height: 4rem;
+}
+
+span.image-title:before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 0.125rem;
+    background-color: #fff;
+    top: 3rem;
+    left: 36%;
+}
