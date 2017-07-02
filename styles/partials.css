@@ -2,17 +2,23 @@
     display: none; 
 }
 
-.curtains-details-image {
+.partials .partials-content {
+    background-color: #F6F6F7;
+    height: 100vh;
+    padding: 0;
+}
+
+.partials-details-image {
     position: relative;
 }
 
-.curtains-details-image img { 
+.partials-details-image img { 
     height: 25rem;
     object-fit: cover;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .curtains-details-image img { 
+    .partials-details-image img { 
         height: 12rem;
     }
 }
@@ -39,4 +45,16 @@ span.image-title:before {
     background-color: #fff;
     top: 3rem;
     left: 36%;
+}
+
+.partials-details-selection, .partials-details {
+    padding: 0 3rem 0 3rem;
+}
+
+.partials-info-icon {
+    background: url(images/info.svg) no-repeat;
+    height: 1rem;    
+    width: 1rem;
+    float: right;
+    cursor: pointer;
 }

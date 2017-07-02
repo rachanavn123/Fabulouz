@@ -31,10 +31,15 @@ nav {
     width: 30%;
     padding: 3rem;
     top: 0;
+    background-color: #fff;
 }
 
 #nav-icon3 {
     display: none;
+}
+
+br {
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
