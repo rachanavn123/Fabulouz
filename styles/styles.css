@@ -42,6 +42,20 @@ br {
     margin-bottom: 2rem;
 }
 
+.break {
+    margin: 1rem;
+    display: block;
+    clear: both;
+    float: left;
+}
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .break {
+        float: none;
+        overflow: hidden;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     nav {
         position: fixed;

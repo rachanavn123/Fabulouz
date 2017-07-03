@@ -9,7 +9,17 @@ $(document).ready(function() {
     $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
     $(".accessaries").load("src/partials/accessaries.html", function() {});
 
-    // Regoster a click handler
+    $(".productDetails").load("src/partials/product-details.html", function() {
+        $(".product-details-carousel").owlCarousel({
+            nav : true, // Show next and prev buttons
+            loop: true,
+            items: 1,
+            margin: 10,
+            autoplay: true
+        });
+    });
+
+    // Register a click handler
     $("#collectionLevel1 li").on("click", function(e) {          
         var element = $("." + e.currentTarget.id);
 
@@ -25,4 +35,14 @@ $(document).ready(function() {
 
         $(".owl-carousel").owlCarousel({autoplay: false});
     });
-});
+
+    window.onProductClick = function(productName) {
+        $(".partials").hide();
+        $(".productDetails").show();        
+    };
+
+    window.closeDetails = function() {
+        $(".productDetails").hide();
+        $("." + $("#collectionLevel1 li.active").attr("id")).show();
+    };
+}); 

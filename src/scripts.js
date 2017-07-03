@@ -16,7 +16,7 @@ $(document).ready(function() {
     // $("#collection-menu, #scocial-menu").on("click", function(e) {
     //     console.log("click");
     //     e.preventDefault();
-    //     e.stopPropagation();
+    //     e.stopPropagation(); 
     // });
 
     function mediaSize() {
