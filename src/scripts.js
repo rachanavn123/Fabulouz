@@ -83,4 +83,13 @@ $(document).ready(function() {
         $("#collectionLevel1 li").removeClass("active");
         $(".owl-carousel").owlCarousel({autoplay: true});
     });
+
+    // Scroll to top on scroll
+    $("#content").sectionsnap({
+        delay : 20, 
+        selector : '.section-snap', 
+        reference : 1, 
+        animationTime : 200,
+        offsetTop: 100
+    });
 });
