@@ -42,7 +42,7 @@ $(document).ready(function() {
     /* Attach the function to the resize event listener */
     window.addEventListener('resize', mediaSize, false);
 
-    $('#nav-icon3').click(function(){
+    $('#nav-icon3').click(function() {
 		$(this).toggleClass('open');
         $(".nav.nav-stacked").toggleClass("open");
 	});

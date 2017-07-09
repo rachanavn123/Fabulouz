@@ -21,7 +21,8 @@ $(document).ready(function() {
 
     // Register a click handler
     $("#collectionLevel1 li").on("click", function(e) {          
-        var element = $("." + e.currentTarget.id);
+        var element = $("." + e.currentTarget.id),
+            menu = $("#nav");
 
         // TODO: remove parallax-mirror after moving to alternate solution for parallax
         $("main, .parallax-mirror").hide();
@@ -34,6 +35,10 @@ $(document).ready(function() {
         $("#collection-menu").addClass("active");
 
         $(".owl-carousel").owlCarousel({autoplay: false});
+
+        if (menu.hasClass("touch-device")) {
+            $('#nav-icon3').trigger("click");
+        }
     });
 
     window.onProductClick = function(productName) {
