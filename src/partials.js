@@ -12,8 +12,6 @@ $(document).ready(function() {
     $(".accessaries").load("src/partials/accessaries.html", function() {
         // TODO: We may have to run the loop here to handle other select boxes on other sections
         $('.selectpicker').on('changed.bs.select', function (event, clickedIndex) {
-            console.log(event.target.value);
-
             // Show all
             if (event.target.value === "all") {
                 var list = $('.partials-details').filter(function() {
@@ -35,7 +33,6 @@ $(document).ready(function() {
                 });
 
                 hideList.hide();
-                console.log(showlist, hideList);
             }
         });
     });
