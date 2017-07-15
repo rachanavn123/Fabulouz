@@ -57,8 +57,19 @@ $(document).ready(function() {
     window.addEventListener('resize', mediaSize, false);
 
     $('#nav-icon3').click(function() {
-		$(this).toggleClass('open');
-        $(".nav.nav-stacked").toggleClass("open");
+        var nav = $(".nav.nav-stacked");
+
+        $(this).toggleClass('open');
+        
+        if (nav.hasClass("open")) {
+            nav.slideUp(500, function(e) {            
+                nav.removeClass("open");
+            });
+        } else {
+            nav.slideDown(500, function(e) {            
+                nav.addClass("open");
+            });
+        }      
 	});
 
     // Reveal or hide menu on scroll up or down respectively
