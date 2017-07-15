@@ -21,7 +21,11 @@ $(document).ready(function() {
 
     function mediaSize() {
         var tablet = '(min-width: 768px) and (max-width: 979px) and (orientation: portrait)',
-            mobilePlusTablet = '(min-width: 320px) and (max-width: 979px) and (orientation: portrait)';
+            mobile = '(min-width: 320px) and (max-width: 767px)',
+            mobilePlusTablet = '(min-width: 320px) and (max-width: 979px) and (orientation: portrait)',
+            adjustedTop = window.matchMedia(tablet).matches 
+                ? 592 : window.matchMedia(mobile).matches 
+                ? 320 : 400;
 
 		if (window.matchMedia(tablet).matches) {
 	    	$("#collectionLevel1, #collectionLevel2").addClass("in");
@@ -34,6 +38,16 @@ $(document).ready(function() {
         } else {
             $("#nav").removeClass("touch-device");
         }
+
+        // TODO: Remove timeout for production
+        setTimeout(function() {
+            // Afix prodcut selection section
+            $(".partials-details-selection").affix({
+                offset: {
+                    top: adjustedTop
+                }
+            });
+        }, 500);
 	};
 
     /* Call the function */
@@ -58,10 +72,14 @@ $(document).ready(function() {
                 menu.removeClass("slideInDown")
                     .addClass("slideOutUp")
                     .addClass("animated");
+                
+                // $("#wrapper").addClass("animate-up");
             } else {
                 menu.removeClass("slideOutUp")
                     .addClass("slideInDown")
                     .addClass("animated");
+                
+                // $("#wrapper").removeClass("animate-up");
             }
             previousScroll = currentScroll;
         }

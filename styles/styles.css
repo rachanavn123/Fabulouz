@@ -49,6 +49,11 @@ br {
     float: left;
 }
 
+/* .animate-up {
+    transition: margin 1s;
+    margin-top: 0;
+} */
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .break {
         float: none;

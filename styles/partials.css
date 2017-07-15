@@ -80,9 +80,46 @@ span.image-title:before {
     padding: 0 3rem 0 3rem;
 }
 
+.partials-details-selection.affix {
+    background-color: #F6F6F7;
+    z-index: 98;
+    width: 100%;
+    padding: 1rem 0 2rem 1.3rem;
+    margin-left: 0;
+    top: 0;
+    box-shadow: 6px 3px 11px 1px #ccc;    
+}
+
+.partials-details-selection.affix .col-md-6 {
+    width: 33.1%;
+}
+
+.partials-details-selection.affix .partials-info-icon {
+    margin: 1rem 2rem 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .partials-details-selection.affix {
+        top: 1.15rem;
+    }
+
+    .partials-details-selection.affix .col-md-6 {
+        width: 49%;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
     .partials-details-selection, .partials-details {
         padding: 0 1.5rem 0 1.5rem;
+    }
+
+    .partials-details-selection.affix {
+        top: 1.625rem;
+    }
+
+    .partials-details-selection.affix .col-md-6 {
+        width: 90%;
+        padding: 0; 
     }
 }
 
