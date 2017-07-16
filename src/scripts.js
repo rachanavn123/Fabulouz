@@ -120,5 +120,21 @@ $(document).ready(function() {
         reference : 1, 
         animationTime : 200,
         offsetTop: 100
-    });
+    });   
 });
+
+// Show the map
+function initMap() {
+    var carpetUdyog = {lat: 13.0019842, lng: 77.5688824};
+    var map = new google.maps.Map(document.querySelector('.maps'), {
+        scrollwheel: false,
+        zoom: 17,
+        center: carpetUdyog
+    });
+
+    var marker = new google.maps.Marker({
+        position: carpetUdyog,
+        map: map,
+        title: "Carpet Udyog"
+    });
+}

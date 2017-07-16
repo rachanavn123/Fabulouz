@@ -470,8 +470,7 @@ header {
     font-weight: bold;
 }
 
-.maps iframe {
-    pointer-events: none;
+.maps {
     border: 0;
     height: 30rem;
 }
