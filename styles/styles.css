@@ -142,6 +142,7 @@ nav > ul {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     nav > ul {
         margin-left: 3.7rem;
+        width: 12rem;
     }
 }
 
