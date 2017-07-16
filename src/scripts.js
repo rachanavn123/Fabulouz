@@ -13,11 +13,21 @@ $(document).ready(function() {
         // itemsMobile : false
     });
 
-    // $("#collection-menu, #scocial-menu").on("click", function(e) {
-    //     console.log("click");
-    //     e.preventDefault();
-    //     e.stopPropagation(); 
-    // });
+    // Scroll to About or Contact
+    $(".scroll-to").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation(); 
+        
+        // Check if view is scrolled to the bottom
+        if(!($(window).scrollTop() + window.innerHeight === $(document).height())) {
+            var scrollTo = $("." + $(e.target).data("scrollto")),
+                container = $("body");
+
+            container.animate({
+                scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+            });
+        }
+    });
 
     function mediaSize() {
         var tablet = '(min-width: 768px) and (max-width: 979px) and (orientation: portrait)',
