@@ -54,6 +54,19 @@ br {
     margin-top: 0;
 } */
 
+.container-fluid {
+    padding: 0;
+}
+
+.parallax-window:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .break {
         float: none;
@@ -94,7 +107,7 @@ br {
     }
 
     #wrapper {
-        margin-top: 12rem;
+        margin-top: 9rem;
     }
 }
 
@@ -119,7 +132,7 @@ br {
     }
 
     #wrapper {
-        margin-top: 8rem;
+        margin-top: 6.5rem;
     }
 
     .nav.nav-stacked.open {
@@ -214,14 +227,14 @@ nav .panel {
 header {
     padding: 3rem;
     background: url("images/fabulouz-logo-text.svg") no-repeat;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     header {
         background: url("images/faboulouz.svg") no-repeat;
         padding: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
     }
 }
 
@@ -254,8 +267,23 @@ header {
 
 /* Carousel */
 .owl-carousel .owl-item img {
-    height: 35rem;
+    margin-top: 3rem;
+    height: calc(100vh - 8rem);
     object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
+    .owl-carousel .owl-item img {
+        margin-top: 1.5rem;
+        height: calc(100vh - 14rem);        
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .owl-carousel .owl-item img {
+        margin-top: 0.5rem;
+        height: calc(100vh - 10rem);        
+    }
 }
 
 .owl-nav {
@@ -335,7 +363,7 @@ header {
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .owl-dots {
-        right: 3rem;
+        right: 1.5rem;
     }
 
     .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
