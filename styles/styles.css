@@ -5,7 +5,15 @@ html {
 body {
     color: #313132;
     font-family: "Raleway";
+    overflow-x: hidden;
+    margin-right: 0;
 }
+
+/* @media (min-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+} */
 
 /*main {
     margin-top: 3rem;
@@ -54,7 +62,7 @@ br {
     margin-top: 0;
 } */
 
-.container-fluid {
+.container-fluid, .col-md-8 {
     padding: 0;
 }
 
@@ -67,6 +75,7 @@ br {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
 }
+
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
     .break {
         float: none;
@@ -432,7 +441,7 @@ header {
 }
 
 .collections-tile {
-    padding: 0 3rem 0 3rem;
+    padding: 0 4.7rem 0 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
@@ -465,7 +474,7 @@ header {
 
 /* Contact Details */
 .contact {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 }
 
 .contact-details {
@@ -506,6 +515,7 @@ header {
 .maps {
     border: 0;
     height: 30rem;
+    margin-bottom: 3rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
