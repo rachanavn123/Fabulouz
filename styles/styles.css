@@ -175,10 +175,6 @@ nav > ul a {
     position: relative;
 }
 
-.nav {
-    padding: 3rem 0 3rem 6rem;
-}
-
 .nav > li > a:focus, .nav >li > a:hover {
     background-color: transparent;
     color: #464749;
@@ -257,12 +253,6 @@ header {
     display: inherit;
 }
 
-.nav.nav-stacked {
-    margin-left: 3rem;
-}
-
-
-
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
     .contact-tablet {
         display: inline-block;
@@ -293,8 +283,9 @@ header {
         left: -3rem;
         width: 100%;
         background-color: rgba(255, 255, 255, .9);
+        padding: 3rem 0 3rem 6rem;
+        margin-left: 3rem;
     }
-
     nav .panel {   
         background-color: transparent;
     }
