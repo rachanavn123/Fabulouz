@@ -575,3 +575,7 @@ footer {
         display: none;
     }
 }
+
+.product-details-title p{
+    display: inline;
+}
