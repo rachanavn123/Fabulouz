@@ -79,7 +79,16 @@ $(document).ready(function() {
             nav.slideDown(500, function(e) {            
                 nav.addClass("open");
             });
-        }      
+           
+            if ($("#nav").hasClass("touch-device")) {
+                $(document).on("touchstart", function(e) {                    
+                    if ($(e.target).closest('.nav').length === 0) {
+                        $('#nav-icon3').trigger("click");
+                        $(document).off("touchstart");
+                    }
+                });
+            }
+        }                
 	});
 
     // Reveal or hide menu on scroll up or down respectively
