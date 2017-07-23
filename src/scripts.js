@@ -87,7 +87,7 @@ $(document).ready(function() {
         menu = $("#nav");
 
     $(window).scroll(function() {
-        if (menu.hasClass("touch-device")) {
+        if (menu.hasClass("touch-device") && !$(".nav-stacked").hasClass("open")) {
             var currentScroll = $(this).scrollTop();
             if (currentScroll > previousScroll) {
                 menu.removeClass("slideInDown")

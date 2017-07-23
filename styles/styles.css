@@ -92,7 +92,6 @@ br {
         top: 0;
         background: #fff;
         z-index: 99;
-        opacity: 0.9;
     }
 
     #nav-icon3 {
@@ -111,8 +110,7 @@ br {
 
     .nav.nav-stacked.open {
         display: inline-flex !important;
-        margin-top: 1.2rem;
-        margin-left: 3rem;
+        margin-top: 1.2rem;        
     }
 
     #wrapper {
@@ -175,6 +173,10 @@ nav > ul > li > ul {
 nav > ul a {
     color: #464749;
     position: relative;
+}
+
+.nav {
+    padding: 3rem 0 3rem 6rem;
 }
 
 .nav > li > a:focus, .nav >li > a:hover {
@@ -255,6 +257,12 @@ header {
     display: inherit;
 }
 
+.nav.nav-stacked {
+    margin-left: 3rem;
+}
+
+
+
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
     .contact-tablet {
         display: inline-block;
@@ -271,6 +279,34 @@ header {
 
     .nav > li > a {
         margin-right: 7rem;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 979px) and (orientation: portrait) {
+    .nav {        
+        margin-bottom: 0;
+        list-style: none;
+        position: fixed;
+        background: white;
+        top: 9.3rem;
+        left: -3rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .9);
+    }
+
+    nav .panel {   
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) { 
+    .nav {
+        top: 5.8rem;
+    }
+
+    nav .panel {
+        width: 13rem;
     }
 }
 
