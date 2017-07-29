@@ -88,7 +88,7 @@ br {
         position: fixed;
         height: auto;
         width: 100%;
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 2rem 2rem 2rem;
         top: 0;
         background: #fff;
         z-index: 99;
@@ -120,7 +120,7 @@ br {
 
 @media (min-width: 320px) and (max-width: 767px) {
     nav {
-        padding: 1.5rem 1.5rem 0 1.5rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
     #nav-icon3 {
