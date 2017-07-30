@@ -78,18 +78,21 @@ $(document).ready(function() {
         } else {
             nav.slideDown(500, function(e) {            
                 nav.addClass("open");
-            });
-           
-            if ($("#nav").hasClass("touch-device")) {
-                $(document).on("touchstart", function(e) {                    
-                    if ($(e.target).closest('.nav').length === 0) {
-                        $('#nav-icon3').trigger("click");
-                        $(document).off("touchstart");
-                    }
-                });
-            }
-        }                
-	});
+
+                if ($("#nav").hasClass("touch-device")) {
+                    $(document).on("touchstart", function(e) {
+                        console.log($(e.target).parents('#nav-icon3').length);
+                        if ($(e.target).closest('.nav').length === 0) {                            
+                            nav.slideUp(500, function(e) {
+                                $('#nav-icon3').removeClass("open");
+                                nav.removeClass("open");                                
+                            });
+                        }
+                    });
+                }
+            });            
+        } 
+    }); 
 
     // Reveal or hide menu on scroll up or down respectively
     var previousScroll = 0,

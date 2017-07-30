@@ -322,6 +322,28 @@ header {
     }
 }
 
+.mobile-landscape-section {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    .mobile-landscape-section {
+        display: block;
+        width: 65%;
+        margin: auto;
+        text-align: center;
+        padding: 2rem;
+        background: #ffefb2;
+        border-radius: 0.5rem;
+        border: 1px solid #e5b700;
+        margin-top: 5rem;
+    }
+
+    #nav, #wrapper, footer {
+        display: none;
+    }
+}
+
 .owl-nav {
     float: right;
 }
