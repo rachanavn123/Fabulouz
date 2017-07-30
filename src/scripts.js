@@ -13,6 +13,10 @@ $(document).ready(function() {
         // itemsMobile : false
     });
 
+    $("header").on("click", function() {
+        window.location = "/";
+    });
+
     // Scroll to About or Contact
     $(".scroll-to").on("click", function(e) {
         e.preventDefault();
@@ -148,7 +152,7 @@ $(document).ready(function() {
         reference : 1, 
         animationTime : 200,
         offsetTop: 100
-    });   
+    });
 });
 
 // Show the map

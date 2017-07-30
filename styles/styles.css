@@ -235,6 +235,7 @@ header {
     padding: 3rem;
     background: url("images/fabulouz-logo-text.svg") no-repeat;
     margin-bottom: 1.5rem;
+    cursor: pointer;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
