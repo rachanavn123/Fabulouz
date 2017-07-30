@@ -61,6 +61,10 @@
     .partials-details-image img { 
         height: 12rem;
     }
+
+    .partials-details h4 {        
+        margin-top: .625rem;
+    }
 }
 
 span.image-title {

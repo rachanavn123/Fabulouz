@@ -30,7 +30,7 @@ $(document).ready(function() {
 
             if(partial.is(":visible")) {
                 $('#nav-icon3').trigger("click");
-                $("#collection-menu").trigger("click");                
+                $("#collection-menu").trigger("click", "noanim");                
             }
 
             container.animate({
@@ -90,8 +90,7 @@ $(document).ready(function() {
                 nav.addClass("open");
 
                 if ($("#nav").hasClass("touch-device")) {
-                    $(document).on("touchstart", function(e) {
-                        console.log($(e.target).parents('#nav-icon3').length);
+                    $(document).on("touchstart", function(e) {                        
                         if ($(e.target).closest('.nav').length === 0) {                            
                             nav.slideUp(500, function(e) {
                                 $('#nav-icon3').removeClass("open");
@@ -136,13 +135,22 @@ $(document).ready(function() {
     });
 
     // Menu actions 
-    $("#collection-menu").on("click", function() {
-        $("main, .parallax-mirror").show();            
-        $(".partials").hide();
+    $("#collection-menu").on("click", function(e, animBody) {        
+        var anim = animBody !== "noanim";
 
+        $("main, .parallax-mirror").show();        
+        
         $("#collection-menu").removeClass("active");
         $("#collectionLevel1 li").removeClass("active");
-        $(".owl-carousel").owlCarousel({autoplay: true});
+        $(".owl-carousel").owlCarousel({autoplay: true});      
+        
+        if (anim && $(".partials").is(":visible")) {
+            $("body").animate({
+                scrollTop: $(".collections").offset().top - $("body").offset().top + $("body").scrollTop()
+            }, 0);
+        }
+
+        $(".partials").hide();
     });
 
     // Scroll to top on scroll
