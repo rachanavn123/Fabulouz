@@ -21,7 +21,13 @@ $(document).ready(function() {
         // Check if view is scrolled to the bottom
         if(!($(window).scrollTop() + window.innerHeight === $(document).height())) {
             var scrollTo = $("." + $(e.target).data("scrollto")),
-                container = $("body");
+                container = $("body"),
+                partial = $(".partials");
+
+            if(partial.is(":visible")) {
+                $('#nav-icon3').trigger("click");
+                $("#collection-menu").trigger("click");                
+            }
 
             container.animate({
                 scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()

@@ -8,7 +8,6 @@ $(document).ready(function() {
     $(".woodenFloor").load("src/partials/wooden-floor.html", function() {});
     $(".bedLeninBath").load("src/partials/bed-lenin-bath.html", function() {});
 
-
     $(".accessaries").load("src/partials/accessaries.html", function() {
         // TODO: We may have to run the loop here to handle other select boxes on other sections
         $('.selectpicker').on('changed.bs.select', function (event, clickedIndex) {
