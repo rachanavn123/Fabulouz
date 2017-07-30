@@ -39,6 +39,7 @@
     font-weight: bold;
     position: relative;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 .partials-details h4:before {
