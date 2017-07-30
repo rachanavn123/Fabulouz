@@ -100,7 +100,7 @@ $(document).ready(function() {
                     });
                 }
             });            
-        } 
+        }
     }); 
 
     // Reveal or hide menu on scroll up or down respectively

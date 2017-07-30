@@ -87,7 +87,7 @@ br {
     nav {
         position: fixed;
         height: auto;
-        width: 100%;
+        width: 100vw;
         padding: 2rem 2rem 2rem 2rem;
         top: 0;
         background: #fff;
@@ -102,11 +102,6 @@ br {
         display: none;
     }
 
-    /* .nav.nav-stacked.open {
-        display: inline-block;
-        margin-top: 1.2rem;
-        margin-left: 3rem;
-    } */
 
     .nav.nav-stacked.open {
         display: inline-flex !important;
@@ -115,6 +110,10 @@ br {
 
     #wrapper {
         margin-top: 9rem;
+    }
+
+    .row {
+         margin: 0; 
     }
 }
 
