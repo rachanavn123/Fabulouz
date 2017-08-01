@@ -116,9 +116,9 @@ span.image-title:before {
 }
 
 @media (min-width: 768px) and (max-width: 979px) and (orientation: portrait) {
-    .partials-details-selection.affix {
+    /* .partials-details-selection.affix {
         padding: 6rem 0 2rem 1.3rem;
-    }
+    } */
 
     .partials-details-selection.affix .col-md-6 {
         width: 49%;
@@ -130,9 +130,9 @@ span.image-title:before {
         padding: 0 1.5rem 0 1.5rem;
     }
 
-    .partials-details-selection.affix {
+    /* .partials-details-selection.affix {
         padding: 4.2rem 0 2rem 2.3rem;
-    }
+    } */
 
     .partials-details-selection.affix .col-md-6 {
         width: 90%;

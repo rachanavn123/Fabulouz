@@ -275,7 +275,7 @@ nav > ul {
     }
 
     nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
-        background: none;
+        background: none !important;
     }
 
     .nav > li > a {
@@ -510,25 +510,24 @@ nav > ul {
 }
 
 .collections-tile > div {
-    height: 12rem;
+    height: 30.3vh;
     text-align: center;
     position: relative;
-    line-height: 11;
+    line-height: 17.4;
     padding: 0;
     color: #313132;
     font-size: 1.1rem;
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-    .collections-tile > div {
-        line-height: 15;
+    .collections-tile > div {        
         font-size: 0.8rem;
     }
 }
 
 .collections-tile img {
     object-fit: cover;
-    height: 12rem;
+    height: 30.3vh;
 }
 
 /* Contact Details */
