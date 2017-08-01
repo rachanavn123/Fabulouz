@@ -450,13 +450,13 @@ nav > ul {
 }
 
 .collections .collections-image, .about .about-image {
-    height: 18rem;
+    height: 23rem; 
     position: relative;
 }
 
 .collections-image span, .about-image span {
     position: absolute;
-    top: 7rem;
+    top: 9.5rem;    
     left: 50%;
     font-size: 2rem;
     display: inline-block;

@@ -10,6 +10,17 @@
     padding: 0;
 }
 
+.partials-details {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.partials-details .padding-da {
+    padding-bottom: 68.4%;
+}
+
 .partials-details-selection {
     margin-bottom: 1rem;
 }
@@ -54,9 +65,15 @@
 }
 
 .partials-details img { 
-    height: 14rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
     object-fit: cover;
     cursor: pointer;
+    display: block;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
