@@ -184,12 +184,10 @@ nav > ul > li:first-child > a:after, nav > ul > li:last-child > a:after {
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background: url("images/drop-down.svg") no-repeat;
+    background: url("images/drop-up.svg") no-repeat;
     display: block;
     right: 0;
     top: 13px;
-    transform: rotate(-90deg);
-    transition: all ease-out .3s;
 }
 
 nav a.collapsed:after {
@@ -197,12 +195,10 @@ nav a.collapsed:after {
     position: absolute;
     width: 1rem;
     height: 1rem;
-    background: url("images/drop-down.svg") no-repeat;
+    background: url("images/drop-down.svg") no-repeat !important;
     display: block;
     right: 0;
-    top: 13px;
-    transform: rotate(0deg) !important;
-    transition: all ease-out .3s;
+    top: 13px;    
 }
 
 nav ul li ul li a {
