@@ -76,7 +76,7 @@ br {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.cover-page {
+.row.cover-page {
     margin-bottom: 3rem;
 }
 
