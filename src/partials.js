@@ -46,16 +46,20 @@ $(document).ready(function() {
         });
     });
 
+    var prevId = null;
+
     // Register a click handler
-    $("#collectionLevel1 li").on("click", function(e) {          
+    $("#collectionLevel1 li, .collections-tile img").on("click", function(e) {          
         var element = $("." + e.currentTarget.id),
             menu = $("#nav");
+
+        prevId = e.currentTarget.id;
 
         // TODO: remove parallax-mirror after moving to alternate solution for parallax
         $("main, .parallax-mirror").hide();
 
-        $(".partials").hide();
-        element.show();
+        $(".partials").hide();        
+        element.scrollTop(0).show();
 
         $("#collectionLevel1 li.active").removeClass("active");
         $(e.currentTarget).addClass("active");        
@@ -68,13 +72,16 @@ $(document).ready(function() {
         }
     });
 
-    window.onProductClick = function(productName) {
+    window.onProductClick = function(productName) {        
         $(".partials").hide();
         $(".productDetails").show();
     };
 
-    window.closeDetails = function() {
+    window.closeDetails = function() {        
         $(".productDetails").hide();
-        $("." + $("#collectionLevel1 li.active").attr("id")).show();
+        // $("." + $("#collectionLevel1 li.active").attr("id")).show();
+                
+        $("." + prevId).show();
+        prevId = null;
     }; 
 }); 
